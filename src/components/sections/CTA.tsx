@@ -37,7 +37,7 @@ export function CTA() {
               お問い合わせする
             </Link>
             <Link
-              href="/services"
+              href="/services/judo-tourism"
               className="btn-secondary text-center"
             >
               サービスを見る
