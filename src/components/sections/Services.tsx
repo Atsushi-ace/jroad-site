@@ -50,20 +50,20 @@ export function Services() {
             >
               <Link href={service.link} className="block">
                 <div className="card-hover rounded-3xl bg-white overflow-hidden shadow-xl border border-borderSubtle">
-                  <div className="aspect-[16/10] overflow-hidden bg-white flex items-center justify-center p-0">
+                  <div className="aspect-[16/10] bg-white overflow-hidden flex items-center justify-center" style={{ border: 'none !important', outline: 'none !important', boxShadow: 'none !important' }}>
                     {service.title.includes('柔道留学斡旋支援') ? (
                       <img 
                         src="/留学斡旋支援.png" 
                         alt="留学斡旋支援" 
                         className="w-full h-full object-contain pt-4"
-                        style={{ border: 'none', outline: 'none', boxShadow: 'none', display: 'block' }}
+                        style={{ border: '0 !important', outline: 'none !important', boxShadow: 'none !important', display: 'block', margin: 0, padding: 0, borderWidth: 0 }}
                       />
                     ) : service.title.includes('柔道ツーリズム') ? (
                       <img 
                         src="/柔道ツーリズム.png" 
                         alt="柔道ツーリズム" 
                         className="w-full h-full object-contain"
-                        style={{ border: 'none', outline: 'none', boxShadow: 'none', display: 'block' }}
+                        style={{ border: '0 !important', outline: 'none !important', boxShadow: 'none !important', display: 'block', margin: 0, padding: 0, borderWidth: 0 }}
                       />
                     ) : (
                       <div
