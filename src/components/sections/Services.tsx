@@ -58,7 +58,14 @@ export function Services() {
                   </div>
                   <div className="p-8">
                     <h3 className="text-2xl font-bold text-textMain mb-3 tracking-tight group-hover:text-primary transition-colors">
-                      {service.title}
+                      {service.title.includes('(今後展開予定)') ? (
+                        <>
+                          {service.title.split('(今後展開予定)')[0]}
+                          <span className="text-lg">(今後展開予定)</span>
+                        </>
+                      ) : (
+                        service.title
+                      )}
                     </h3>
                     <p className="text-base text-textMuted leading-relaxed mb-4">
                       {service.description}

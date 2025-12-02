@@ -18,7 +18,16 @@ export function ServiceCards({ services }: ServiceCardsProps) {
         {services.map((service) => (
           <div key={service.slug} className="flex h-full flex-col justify-between rounded-2xl border border-subtle bg-card p-10 shadow-japanese transition hover:shadow-japanese-hover">
             <div>
-              <h2 className="text-xl font-semibold text-primary tracking-wide">{service.title}</h2>
+              <h2 className="text-xl font-semibold text-primary tracking-wide">
+                {service.title.includes('(今後展開予定)') ? (
+                  <>
+                    {service.title.split('(今後展開予定)')[0]}
+                    <span className="text-base">(今後展開予定)</span>
+                  </>
+                ) : (
+                  service.title
+                )}
+              </h2>
               <p className="mt-4 text-base text-muted leading-relaxed">{service.description}</p>
             </div>
             <Link href={service.link} className="mt-8 inline-flex items-center text-sm font-semibold text-accent hover:text-primary transition-colors">
