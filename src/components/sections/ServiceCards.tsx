@@ -18,6 +18,15 @@ export function ServiceCards({ services }: ServiceCardsProps) {
         {services.map((service) => (
           <div key={service.slug} className="flex h-full flex-col justify-between rounded-2xl border border-subtle bg-card p-10 shadow-japanese transition hover:shadow-japanese-hover">
             <div>
+              {service.title.includes('柔道留学斡旋支援') && (
+                <div className="mb-4">
+                  <img 
+                    src="/留学斡旋支援.png" 
+                    alt="留学斡旋支援" 
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              )}
               <h2 className="text-xl font-semibold text-primary tracking-wide">
                 {service.title.includes('(今後展開予定)') ? (
                   <>

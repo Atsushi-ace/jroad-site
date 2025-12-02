@@ -57,6 +57,15 @@ export function Services() {
                     />
                   </div>
                   <div className="p-8">
+                    {service.title.includes('柔道留学斡旋支援') && (
+                      <div className="mb-4">
+                        <img 
+                          src="/留学斡旋支援.png" 
+                          alt="留学斡旋支援" 
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    )}
                     <h3 className="text-2xl font-bold text-textMain mb-3 tracking-tight group-hover:text-primary transition-colors">
                       {service.title.includes('(今後展開予定)') ? (
                         <>

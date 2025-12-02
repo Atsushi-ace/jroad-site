@@ -70,7 +70,14 @@ export function Header() {
                     : 'text-white/80 hover:text-white'
               }`}
             >
-              {item.label}
+              {item.label.includes('(今後展開予定)') ? (
+                <>
+                  {item.label.split('(今後展開予定)')[0]}
+                  <span className="text-xs">(今後展開予定)</span>
+                </>
+              ) : (
+                item.label
+              )}
               <span
                 className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
                   pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
@@ -134,7 +141,14 @@ export function Header() {
                         : 'text-white/80 hover:text-white'
                   }`}
                 >
-                  {item.label}
+                  {item.label.includes('(今後展開予定)') ? (
+                    <>
+                      {item.label.split('(今後展開予定)')[0]}
+                      <span className="text-sm">(今後展開予定)</span>
+                    </>
+                  ) : (
+                    item.label
+                  )}
                 </Link>
               ))}
             </nav>
