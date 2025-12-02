@@ -22,7 +22,7 @@ export function ServiceCards({ services }: ServiceCardsProps) {
                 {service.title.includes('(今後展開予定)') ? (
                   <>
                     {service.title.split('(今後展開予定)')[0]}
-                    <span className="text-base">(今後展開予定)</span>
+                    <span className="text-sm">(今後展開予定)</span>
                   </>
                 ) : (
                   service.title

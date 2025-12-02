@@ -11,7 +11,7 @@ export function PageHeader({ title, subtitle }: PageHeaderProps) {
           {title.includes('(今後展開予定)') ? (
             <>
               {title.split('(今後展開予定)')[0]}
-              <span className="text-2xl md:text-3xl">(今後展開予定)</span>
+              <span className="text-base md:text-lg">(今後展開予定)</span>
             </>
           ) : (
             title
