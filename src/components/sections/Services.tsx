@@ -55,6 +55,12 @@ export function Services() {
                       <img 
                         src="/留学斡旋支援.png" 
                         alt="留学斡旋支援" 
+                        className="w-full h-full object-contain pt-4"
+                      />
+                    ) : service.title.includes('柔道ツーリズム') ? (
+                      <img 
+                        src="/柔道ツーリズム.png" 
+                        alt="柔道ツーリズム" 
                         className="w-full h-full object-contain"
                       />
                     ) : (
