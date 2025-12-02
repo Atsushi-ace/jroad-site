@@ -50,22 +50,21 @@ export function Services() {
             >
               <Link href={service.link} className="block">
                 <div className="card-hover rounded-3xl bg-white overflow-hidden shadow-xl border border-borderSubtle">
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <div
-                      className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                      style={{ backgroundImage: `url(${service.image})` }}
-                    />
+                  <div className="aspect-[16/10] overflow-hidden bg-white flex items-center justify-center">
+                    {service.title.includes('柔道留学斡旋支援') ? (
+                      <img 
+                        src="/留学斡旋支援.png" 
+                        alt="留学斡旋支援" 
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <div
+                        className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style={{ backgroundImage: `url(${service.image})` }}
+                      />
+                    )}
                   </div>
                   <div className="p-8">
-                    {service.title.includes('柔道留学斡旋支援') && (
-                      <div className="mb-4">
-                        <img 
-                          src="/留学斡旋支援.png" 
-                          alt="留学斡旋支援" 
-                          className="w-full h-auto object-contain"
-                        />
-                      </div>
-                    )}
                     <h3 className="text-2xl font-bold text-textMain mb-3 tracking-tight group-hover:text-primary transition-colors">
                       {service.title.includes('(今後展開予定)') ? (
                         <>
