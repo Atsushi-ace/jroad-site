@@ -60,7 +60,7 @@ export function Services() {
                       />
                     ) : service.title.includes('柔道ツーリズム') ? (
                       <img 
-                        src="/柔道ツーリズム.png" 
+                        src="/柔道ツーリズムR2.png" 
                         alt="柔道ツーリズム" 
                         className="w-full h-full object-contain"
                         style={{ border: '0 !important', outline: 'none !important', boxShadow: 'none !important', display: 'block', margin: 0, padding: 0, borderWidth: 0 }}
