@@ -5,6 +5,7 @@ export const siteConfig = {
   language: "ja",
   navigation: [
     { label: "ホーム", path: "/" },
+    { label: "柔道体験", path: "/services/judo-experience" },
     { label: "柔道ツーリズム", path: "/services/judo-tourism" },
     { label: "柔道留学支援(今後展開予定)", path: "/services/judo-study" },
     { label: "メンバー", path: "/members" },
