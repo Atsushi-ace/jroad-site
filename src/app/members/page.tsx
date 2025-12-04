@@ -41,7 +41,7 @@ export default function MembersPage() {
                   src="/瀬戸口さん_表面.jpg"
                   alt={member.name}
                   className="w-full h-auto object-contain"
-                  loading="lazy"
+                  style={{ display: 'block', width: '100%', height: 'auto' }}
                 />
               </div>
             </div>
