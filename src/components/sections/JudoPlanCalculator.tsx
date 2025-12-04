@@ -397,20 +397,9 @@ export function JudoPlanCalculator() {
                     fontSize: '1.6rem',
                     fontWeight: 700,
                     color: '#111827',
-                    marginBottom: '4px',
                   }}
                 >
                   {formatYen(totalPrice)}
-                </div>
-                <div
-                  style={{
-                    fontSize: '0.8rem',
-                    color: '#6b7280',
-                  }}
-                >
-                  ※想定コストに対して利益率
-                  {formatPercent(margin)}（目標 {formatPercent(PROFIT_MARGIN)}）
-                  となるように設定
                 </div>
               </div>
             )}
