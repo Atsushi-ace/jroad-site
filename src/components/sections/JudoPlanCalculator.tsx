@@ -416,46 +416,6 @@ export function JudoPlanCalculator() {
             )}
           </div>
 
-          <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb', margin: '12px 0' }} />
-
-          <div>
-            <div
-              style={{
-                fontSize: '0.85rem',
-                fontWeight: 600,
-                color: '#6b7280',
-                marginBottom: '6px',
-              }}
-            >
-              内訳（想定コスト）
-            </div>
-            <ul
-              style={{
-                listStyle: 'none',
-                padding: 0,
-                margin: 0,
-                fontSize: '0.9rem',
-                color: '#374151',
-              }}
-            >
-              <li style={{ marginBottom: 4 }}>
-                ・保険料（プラン全体）: <strong>{formatYen(insurance)}</strong>
-              </li>
-              <li style={{ marginBottom: 4 }}>
-                ・人件費（{daysNum}日分）: <strong>{formatYen(labour)}</strong>
-              </li>
-              <li style={{ marginBottom: 4 }}>
-                ・施設利用料（{daysNum}日分）: <strong>{formatYen(usageFee)}</strong>
-              </li>
-              <li style={{ marginBottom: 4 }}>
-                ・合計コスト: <strong>{formatYen(insurance + labour + usageFee)}</strong>
-              </li>
-              <li style={{ marginTop: 4 }}>
-                ・想定利益: <strong>{formatYen(profit)}</strong>
-              </li>
-            </ul>
-          </div>
-
           <div
             style={{
               marginTop: '12px',
