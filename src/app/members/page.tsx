@@ -35,6 +35,15 @@ export default function MembersPage() {
             <p className="mt-4 text-lg font-medium text-muted md:text-xl">
               {member.role}
             </p>
+            <div className="mt-8 flex justify-center">
+              <div className="w-full max-w-md overflow-hidden rounded-2xl bg-muted shadow-japanese">
+                <img
+                  src="/瀬戸口さん_表面.jpg"
+                  alt={member.name}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
           </div>
 
           {/* メッセージコンテンツ */}
