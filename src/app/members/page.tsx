@@ -47,6 +47,41 @@ export default function MembersPage() {
             </div>
           </div>
 
+          {/* 詳細情報 */}
+          <div className="mx-auto max-w-4xl">
+            <div className="rounded-2xl border border-subtle bg-card p-8 md:p-12 shadow-japanese space-y-8">
+              {/* 学歴 */}
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">学歴</h3>
+                <p className="text-base text-muted md:text-lg">天理大学体育学部体育学科 卒業</p>
+              </div>
+
+              {/* 柔道の大会成績 */}
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">柔道の大会成績</h3>
+                <div className="space-y-2 text-base text-muted md:text-lg">
+                  <p>年齢：28歳</p>
+                  <p>柔道歴：20年</p>
+                  <p>小中高大社で全国大会出場</p>
+                  <p>大学の時に全国大会上位入賞</p>
+                  <p>神奈川県成年の部 国体代表</p>
+                </div>
+              </div>
+
+              {/* 職歴 */}
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">職歴</h3>
+                <p className="text-base text-muted md:text-lg">教員6年目</p>
+              </div>
+
+              {/* 出身地 */}
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">出身地</h3>
+                <p className="text-base text-muted md:text-lg">神奈川県出身</p>
+              </div>
+            </div>
+          </div>
+
           {/* メッセージコンテンツ */}
           <div className="mx-auto max-w-4xl">
             <div className="rounded-2xl border border-subtle bg-card p-10 md:p-16 shadow-japanese">
