@@ -6,15 +6,15 @@ import Link from 'next/link';
 
 const services = [
   {
-    title: '柔道ツーリズム',
-    description: '数日〜1週間程度の滞在で、日本の道場稽古と観光・文化体験を組み合わせたオーダーメイドツアー。',
-    link: '/services/judo-tourism',
-    image: 'https://images.unsplash.com/photo-1542818454-dc05decf9db3?auto=format&fit=crop&w=800&q=80',
-  },
-  {
     title: '柔道体験',
     description: '日本の道場で柔道を体験できるプログラム。',
     link: '/services/judo-experience',
+    image: 'https://images.unsplash.com/photo-1542818454-dc05decf9db3?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    title: '柔道ツーリズム',
+    description: '数日〜1週間程度の滞在で、日本の道場稽古と観光・文化体験を組み合わせたオーダーメイドツアー。',
+    link: '/services/judo-tourism',
     image: 'https://images.unsplash.com/photo-1542818454-dc05decf9db3?auto=format&fit=crop&w=800&q=80',
   },
   {
