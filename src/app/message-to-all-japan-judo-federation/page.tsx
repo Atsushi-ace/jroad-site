@@ -31,9 +31,8 @@ export default function MessageToAllJapanJudoFederationPage() {
       <BulletList
         title="本事業を通じて解決したい課題"
         items={[
-          '日本の柔道連盟(全柔連)にお金がないため、日本の柔道家に十分な予算が降りてこない',
           '日本の伝統武術である柔道を世界にアピールする機会がない',
-          '日本の柔道人口の減少を起因とした道場存続の危機',
+          '柔道人口の増加への貢献を通した、道場存続への貢献',
         ]}
       />
 
