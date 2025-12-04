@@ -405,25 +405,6 @@ export function JudoPlanCalculator() {
             )}
           </div>
 
-          <div
-            style={{
-              marginTop: '12px',
-              padding: '8px 10px',
-              borderRadius: '8px',
-              backgroundColor: '#fefce8',
-              fontSize: '0.8rem',
-              color: '#92400e',
-            }}
-          >
-            表の保険料はそのまま使用し、人件費は
-            <br />
-            1拠点：6,000円 / 日、2拠点：12,000円 / 日、3拠点：18,000円 / 日
-            <br />
-            施設利用料は
-            <br />
-            1拠点：1,000円 / 日、2拠点：2,000円 / 日、3拠点：3,000円 / 日
-            として計算しています。
-          </div>
         </div>
       </div>
     </div>
