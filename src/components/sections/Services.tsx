@@ -52,10 +52,10 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
+              className="group h-full"
             >
-              <Link href={service.link} className="block">
-                <div className="card-hover rounded-3xl bg-white overflow-hidden shadow-xl border border-borderSubtle">
+              <Link href={service.link} className="block h-full">
+                <div className="card-hover rounded-3xl bg-white overflow-hidden shadow-xl border border-borderSubtle h-full flex flex-col">
                   <div className="aspect-[16/10] bg-white overflow-hidden flex items-center justify-center px-8 pt-8 pb-8" style={{ border: 'none !important', outline: 'none !important', boxShadow: 'none !important' }}>
                     {service.title.includes('柔道留学斡旋支援') ? (
                       <img 
@@ -78,7 +78,7 @@ export function Services() {
                       />
                     )}
                   </div>
-                  <div className="p-8">
+                  <div className="p-8 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-textMain mb-3 tracking-tight group-hover:text-primary transition-colors">
                       {service.title.includes('(今後展開予定)') ? (
                         <>
@@ -89,7 +89,7 @@ export function Services() {
                         service.title
                       )}
                     </h3>
-                    <p className="text-base text-textMuted leading-relaxed mb-4">
+                    <p className="text-base text-textMuted leading-relaxed mb-4 flex-grow">
                       {service.description}
                     </p>
                     <span className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
