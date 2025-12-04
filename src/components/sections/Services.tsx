@@ -12,6 +12,12 @@ const services = [
     image: 'https://images.unsplash.com/photo-1542818454-dc05decf9db3?auto=format&fit=crop&w=800&q=80',
   },
   {
+    title: '柔道体験',
+    description: '日本の道場で柔道を体験できるプログラム。',
+    link: '/services/judo-experience',
+    image: 'https://images.unsplash.com/photo-1542818454-dc05decf9db3?auto=format&fit=crop&w=800&q=80',
+  },
+  {
     title: '柔道留学斡旋支援(今後展開予定)',
     description: '数ヶ月〜数年単位の中長期滞在を想定した、道場・学校・住環境などのトータルコーディネート。',
     link: '/services/judo-study',
@@ -38,7 +44,7 @@ export function Services() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
