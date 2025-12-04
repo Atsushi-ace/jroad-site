@@ -6,7 +6,7 @@ import { TextWithImage } from '@/components/sections/TextWithImage';
 import { CTASection } from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
-  title: '全柔連に向けた思い｜J-Road',
+  title: '柔道に向けた想い｜J-Road',
   description:
     'J-Roadは、日本の柔道連盟が直面する課題を、本事業を通じて解決したいと考えています。柔道界の発展と道場存続の危機を乗り越えるための取り組みをご紹介します。',
 };
@@ -15,7 +15,7 @@ export default function MessageToAllJapanJudoFederationPage() {
   return (
     <div className="space-y-16 pb-16">
       <PageHeader
-        title="全柔連に向けた思い"
+        title="柔道に向けた想い"
         subtitle="本事業を通じて、日本の柔道界が直面する課題の解決に取り組みます。"
       />
 

@@ -9,7 +9,7 @@ export const siteConfig = {
     { label: "柔道留学支援(今後展開予定)", path: "/services/judo-study" },
     { label: "メンバー", path: "/members" },
     { label: "お問い合わせ", path: "/contact" },
-    { label: "全柔連に向けた思い", path: "/message-to-all-japan-judo-federation" },
+    { label: "柔道に向けた想い", path: "/message-to-all-japan-judo-federation" },
   ],
   theme: {
     colors: {
