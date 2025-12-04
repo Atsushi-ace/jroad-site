@@ -50,7 +50,7 @@ export default function MessageToAllJapanJudoFederationPage() {
               >
                 <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
                 <span className="group-hover:underline">
-                  ①日本での道場設立及び外国人柔道家の採用を通した雇用の拡大・柔道業界への貢献
+                  ①日本での道場設立を通した雇用の拡大・柔道業界への貢献
                 </span>
               </Link>
             </li>

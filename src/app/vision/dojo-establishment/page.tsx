@@ -7,7 +7,7 @@ import { CTASection } from '@/components/sections/CTASection';
 export const metadata: Metadata = {
   title: '道場設立・雇用拡大｜J-Roadの将来ビジョン',
   description:
-    '日本での道場設立及び外国人柔道家の採用を通した雇用の拡大・柔道業界への貢献。J-Roadが目指す柔道界の持続的な発展についてご紹介します。',
+    '日本での道場設立を通した雇用の拡大・柔道業界への貢献。J-Roadが目指す柔道界の持続的な発展についてご紹介します。',
 };
 
 export default function DojoEstablishmentPage() {
@@ -15,7 +15,7 @@ export default function DojoEstablishmentPage() {
     <div className="space-y-16 pb-16">
       <PageHeader
         title="道場設立・雇用拡大"
-        subtitle="日本での道場設立及び外国人柔道家の採用を通した雇用の拡大・柔道業界への貢献"
+        subtitle="日本での道場設立を通した雇用の拡大・柔道業界への貢献"
       />
 
       <TextWithImage
