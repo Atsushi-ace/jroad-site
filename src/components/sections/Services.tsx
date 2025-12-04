@@ -56,28 +56,6 @@ export function Services() {
             >
               <Link href={service.link} className="block h-full">
                 <div className="card-hover rounded-3xl bg-white overflow-hidden shadow-xl border border-borderSubtle h-full flex flex-col">
-                  <div className="aspect-[16/10] bg-white overflow-hidden flex items-center justify-center px-8 pt-8 pb-8" style={{ border: 'none !important', outline: 'none !important', boxShadow: 'none !important' }}>
-                    {service.title.includes('柔道留学斡旋支援') ? (
-                      <img 
-                        src="/留学斡旋支援.png" 
-                        alt="留学斡旋支援" 
-                        className="w-full h-auto object-contain"
-                        style={{ border: '0 !important', outline: 'none !important', boxShadow: 'none !important', display: 'block', margin: 0, padding: 0, borderWidth: 0 }}
-                      />
-                    ) : service.title.includes('柔道ツーリズム') ? (
-                      <img 
-                        src="/柔道ツーリズムR2.png" 
-                        alt="柔道ツーリズム" 
-                        className="w-full h-auto object-contain"
-                        style={{ border: '0 !important', outline: 'none !important', boxShadow: 'none !important', display: 'block', margin: 0, padding: 0, borderWidth: 0 }}
-                      />
-                    ) : (
-                      <div
-                        className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                        style={{ backgroundImage: `url(${service.image})` }}
-                      />
-                    )}
-                  </div>
                   <div className="p-8 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-textMain mb-3 tracking-tight group-hover:text-primary transition-colors">
                       {service.title.includes('(今後展開予定)') ? (
