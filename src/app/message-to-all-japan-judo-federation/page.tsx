@@ -86,7 +86,7 @@ export default function MessageToAllJapanJudoFederationPage() {
           </h2>
           <div className="mt-6 space-y-6 text-base text-muted md:text-lg leading-relaxed">
             <p>
-              海外からの柔道家・柔道ファンが日本を訪れることで、道場への収益還元、柔道の国際的な認知向上、そして柔道人口の拡大につながると考えています。
+              海外からの柔道家・柔道ファンが日本を訪れることで、柔道を通した国際交流、柔道の国際的な認知向上、そして柔道人口の拡大につながると考えています。
             </p>
             <p>
               本事業を通じて、日本の柔道界に新たな風を吹き込み、柔道の素晴らしさを世界に伝えるとともに、柔道界の持続的な発展に貢献していきたいと考えております。
