@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useI18n } from '@/i18nContext';
+import type { SupportedLang } from '@/i18n';
 
 const navItems = siteConfig.navigation;
 
@@ -13,6 +15,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const { currentLang, setLang } = useI18n();
 
   useEffect(() => {
     // ホームページ以外では初期状態で背景を表示
@@ -86,17 +89,33 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <button
-          type="button"
-          className={`inline-flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-colors md:hidden ${
-            isScrolled
-              ? 'border-borderSubtle text-textMain hover:bg-bgLight'
-              : 'border-white/30 text-white hover:bg-white/10'
-          }`}
-          onClick={toggleMenu}
-          aria-expanded={isOpen}
-          aria-label="メニューを開閉"
-        >
+        <div className="flex items-center gap-4">
+          <select
+            value={currentLang}
+            onChange={(e) => setLang(e.target.value as SupportedLang)}
+            className={`text-sm font-medium rounded-lg border px-3 py-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary ${
+              isScrolled
+                ? 'border-borderSubtle text-textMain bg-white hover:bg-bgLight'
+                : 'border-white/30 text-white bg-white/10 hover:bg-white/20'
+            }`}
+            aria-label="Language selector"
+          >
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="ja">JA</option>
+            <option value="pt">PT</option>
+          </select>
+          <button
+            type="button"
+            className={`inline-flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-colors md:hidden ${
+              isScrolled
+                ? 'border-borderSubtle text-textMain hover:bg-bgLight'
+                : 'border-white/30 text-white hover:bg-white/10'
+            }`}
+            onClick={toggleMenu}
+            aria-expanded={isOpen}
+            aria-label="メニューを開閉"
+          >
           <span className="sr-only">メニュー</span>
           <svg
             className="h-5 w-5"
@@ -112,8 +131,9 @@ export function Header() {
             ) : (
               <path d="M4 6h16M4 12h16M4 18h16" />
             )}
-          </svg>
-        </button>
+            </svg>
+          </button>
+        </div>
       </div>
       <AnimatePresence>
         {isOpen && (

@@ -4,6 +4,7 @@ import './globals.css';
 import { siteConfig } from '@/config/site';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { I18nProvider } from '@/i18nContext';
 
 const notoSans = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
@@ -48,11 +49,13 @@ export default function RootLayout({
   return (
     <html lang={siteConfig.language}>
       <body className={`${notoSans.variable} ${notoSerif.variable} ${inter.variable} antialiased`}>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1 relative pt-0">{children}</main>
-          <Footer />
-        </div>
+        <I18nProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1 relative pt-0">{children}</main>
+            <Footer />
+          </div>
+        </I18nProvider>
       </body>
     </html>
   );
