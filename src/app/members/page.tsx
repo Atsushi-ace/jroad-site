@@ -17,8 +17,8 @@ export default function MembersPage() {
   const member = members[0];
   
   return (
-    <div className="min-h-screen relative">
-      {/* 背景画像 - 全画面 */}
+    <>
+      {/* 背景画像 - 全画面固定 */}
       <div 
         className="fixed inset-0 z-0"
         style={{
@@ -26,16 +26,18 @@ export default function MembersPage() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          width: '100%',
+          height: '100%',
         }}
       >
         {/* オーバーレイ（必要に応じて調整） */}
         <div className="absolute inset-0 bg-black/20" />
       </div>
-
-      {/* コンテンツ */}
+      
       <div className="relative z-10 min-h-screen">
-        {/* 名前 - 左上に手書き風の白文字 */}
-        <div className="absolute top-8 left-8 md:top-12 md:left-12 z-20">
+
+        {/* 名前 - 左上に手書き風の白文字（ヘッダーの下） */}
+        <div className="absolute top-24 left-8 md:top-28 md:left-12 z-20">
           <h1 
             className="text-white text-5xl md:text-7xl lg:text-8xl font-bold"
             style={{
@@ -106,6 +108,6 @@ export default function MembersPage() {
           </section>
         </div>
       </div>
-    </div>
+    </>
   );
 }
