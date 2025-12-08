@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { PageHeader } from '@/components/sections/PageHeader';
-import { JapaneseBackground } from '@/components/decorative/JapaneseBackground';
 
 const members = [
   {
@@ -19,37 +17,49 @@ export default function MembersPage() {
   const member = members[0];
   
   return (
-    <div className="pb-16 relative">
-      <PageHeader
-        title="メンバー"
-        subtitle="柔道界に精通し、国際的な視点を持つメンバーが、皆さまの体験を丁寧にコーディネートします。"
-      />
+    <div className="min-h-screen relative">
+      {/* 背景画像 - 全画面 */}
+      <div 
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/瀬戸口さん_表面.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* オーバーレイ（必要に応じて調整） */}
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
 
-      <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 relative">
-        <div className="space-y-12">
-          {/* メイン見出し */}
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-primary md:text-4xl lg:text-5xl tracking-tight leading-tight">
-              {member.name}
-            </h1>
-            <p className="mt-4 text-lg font-medium text-muted md:text-xl">
-              {member.role}
-            </p>
-            <div className="mt-8 flex justify-center">
-              <div className="w-full max-w-md overflow-hidden rounded-2xl bg-muted shadow-japanese">
-                <img
-                  src="/瀬戸口さん_表面.jpg"
-                  alt={member.name}
-                  className="w-full h-auto object-contain"
-                  style={{ display: 'block', width: '100%', height: 'auto' }}
-                />
-              </div>
-            </div>
-          </div>
+      {/* コンテンツ */}
+      <div className="relative z-10 min-h-screen">
+        {/* 名前 - 左上に手書き風の白文字 */}
+        <div className="absolute top-8 left-8 md:top-12 md:left-12 z-20">
+          <h1 
+            className="text-white text-5xl md:text-7xl lg:text-8xl font-bold"
+            style={{
+              fontFamily: '"Noto Serif JP", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif',
+              textShadow: '3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 0, 0, 0.5)',
+              letterSpacing: '0.15em',
+              lineHeight: '1.2',
+              fontWeight: '900',
+              filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.7))',
+              WebkitTextStroke: '1px rgba(255, 255, 255, 0.3)',
+              textStroke: '1px rgba(255, 255, 255, 0.3)',
+            }}
+          >
+            {member.name}
+          </h1>
+        </div>
 
-          {/* 詳細情報 */}
+        {/* メインコンテンツエリア */}
+        <div className="pt-32 md:pt-40 pb-16">
+          <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 relative">
+            <div className="space-y-12">
+              {/* 詳細情報 */}
           <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-subtle bg-card p-8 md:p-12 shadow-japanese space-y-8">
+            <div className="rounded-2xl border border-white/20 bg-white/90 backdrop-blur-sm p-8 md:p-12 shadow-japanese space-y-8">
               {/* 学歴 */}
               <div>
                 <h3 className="text-xl font-bold text-primary mb-4">学歴</h3>
@@ -84,7 +94,7 @@ export default function MembersPage() {
 
           {/* メッセージコンテンツ */}
           <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-subtle bg-card p-10 md:p-16 shadow-japanese">
+            <div className="rounded-2xl border border-white/20 bg-white/90 backdrop-blur-sm p-10 md:p-16 shadow-japanese">
               <div className="prose prose-lg max-w-none">
                 <p className="text-base text-muted leading-relaxed md:text-lg md:leading-relaxed whitespace-pre-line">
                   {member.bio}
@@ -92,8 +102,10 @@ export default function MembersPage() {
               </div>
             </div>
           </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
