@@ -46,7 +46,7 @@ export default function MembersPage() {
               fontWeight: '900',
             }}
           >
-            {member.name}
+            CEO｜{member.name}
           </h1>
         </div>
 
@@ -58,13 +58,13 @@ export default function MembersPage() {
             <div>
               <h3 
                 className="text-xl font-bold text-white mb-3" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 学歴
               </h3>
               <p 
                 className="text-base text-white md:text-lg" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 天理大学体育学部体育学科 卒業
               </p>
@@ -74,13 +74,13 @@ export default function MembersPage() {
             <div>
               <h3 
                 className="text-xl font-bold text-white mb-3" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 柔道の大会成績
               </h3>
               <div 
                 className="space-y-2 text-base text-white md:text-lg" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 <p>年齢：28歳</p>
                 <p>柔道歴：20年</p>
@@ -94,13 +94,13 @@ export default function MembersPage() {
             <div>
               <h3 
                 className="text-xl font-bold text-white mb-3" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 職歴
               </h3>
               <p 
                 className="text-base text-white md:text-lg" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 教員6年目
               </p>
@@ -110,13 +110,13 @@ export default function MembersPage() {
             <div>
               <h3 
                 className="text-xl font-bold text-white mb-3" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 出身地
               </h3>
               <p 
                 className="text-base text-white md:text-lg" 
-                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', fontSize: '1.4em' }}
               >
                 神奈川県出身
               </p>
