@@ -33,7 +33,7 @@ export default function MembersPage() {
       </div>
       
       {/* コンテンツレイヤー */}
-      <div className="relative z-10 min-h-screen">
+      <div className="relative z-10 min-h-screen pb-32">
         {/* 名前 - 左上に白文字 */}
         <div className="absolute top-24 left-6 md:top-28 md:left-12 z-20">
           <h1 
@@ -133,6 +133,27 @@ export default function MembersPage() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* 2枚目の背景画像セクション - 下にスクロールした際に表示 */}
+      <div className="relative min-h-screen">
+        {/* 2枚目の背景画像 */}
+        <div 
+          className="absolute inset-0 w-full h-full z-0"
+          style={{
+            backgroundImage: 'url(/グッチ背面.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+          }}
+        >
+          {/* オーバーレイ */}
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        
+        {/* スペーサー - 2枚目の背景を表示するための高さ */}
+        <div className="relative z-10 min-h-screen" />
       </div>
     </div>
   );
