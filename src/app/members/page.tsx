@@ -17,38 +17,33 @@ export default function MembersPage() {
   const member = members[0];
   
   return (
-    <>
+    <div className="relative min-h-screen">
       {/* 背景画像 - 全画面固定 */}
       <div 
-        className="fixed inset-0 z-0"
+        className="fixed top-0 left-0 w-full h-full z-0"
         style={{
           backgroundImage: 'url(/瀬戸口さん_表面.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          width: '100%',
-          height: '100%',
         }}
       >
-        {/* オーバーレイ（必要に応じて調整） */}
-        <div className="absolute inset-0 bg-black/20" />
+        {/* オーバーレイ */}
+        <div className="absolute inset-0 bg-black/30" />
       </div>
       
+      {/* コンテンツレイヤー */}
       <div className="relative z-10 min-h-screen">
-
-        {/* 名前 - 左上に手書き風の白文字（ヘッダーの下） */}
-        <div className="absolute top-24 left-8 md:top-28 md:left-12 z-20">
+        {/* 名前 - 左上に手書き風の白文字 */}
+        <div className="absolute top-24 left-6 md:top-28 md:left-12 z-20">
           <h1 
-            className="text-white text-5xl md:text-7xl lg:text-8xl font-bold"
+            className="text-white text-4xl md:text-6xl lg:text-7xl font-black"
             style={{
               fontFamily: '"Noto Serif JP", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif',
-              textShadow: '3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 0, 0, 0.5)',
-              letterSpacing: '0.15em',
-              lineHeight: '1.2',
+              textShadow: '4px 4px 8px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.6)',
+              letterSpacing: '0.2em',
+              lineHeight: '1.1',
               fontWeight: '900',
-              filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.7))',
-              WebkitTextStroke: '1px rgba(255, 255, 255, 0.3)',
-              textStroke: '1px rgba(255, 255, 255, 0.3)',
             }}
           >
             {member.name}
@@ -56,58 +51,58 @@ export default function MembersPage() {
         </div>
 
         {/* メインコンテンツエリア */}
-        <div className="pt-32 md:pt-40 pb-16">
-          <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 relative">
+        <div className="pt-40 md:pt-48 pb-16">
+          <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
             <div className="space-y-12">
               {/* 詳細情報 */}
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-white/20 bg-white/90 backdrop-blur-sm p-8 md:p-12 shadow-japanese space-y-8">
-              {/* 学歴 */}
-              <div>
-                <h3 className="text-xl font-bold text-primary mb-4">学歴</h3>
-                <p className="text-base text-muted md:text-lg">天理大学体育学部体育学科 卒業</p>
-              </div>
+              <div className="mx-auto max-w-4xl">
+                <div className="rounded-2xl border border-white/30 bg-white/95 backdrop-blur-md p-8 md:p-12 shadow-2xl space-y-8">
+                  {/* 学歴 */}
+                  <div>
+                    <h3 className="text-xl font-bold text-primary mb-4">学歴</h3>
+                    <p className="text-base text-muted md:text-lg">天理大学体育学部体育学科 卒業</p>
+                  </div>
 
-              {/* 柔道の大会成績 */}
-              <div>
-                <h3 className="text-xl font-bold text-primary mb-4">柔道の大会成績</h3>
-                <div className="space-y-2 text-base text-muted md:text-lg">
-                  <p>年齢：28歳</p>
-                  <p>柔道歴：20年</p>
-                  <p>小中高大社で全国大会出場</p>
-                  <p>大学の時に全国大会上位入賞</p>
-                  <p>神奈川県成年の部 国体代表</p>
+                  {/* 柔道の大会成績 */}
+                  <div>
+                    <h3 className="text-xl font-bold text-primary mb-4">柔道の大会成績</h3>
+                    <div className="space-y-2 text-base text-muted md:text-lg">
+                      <p>年齢：28歳</p>
+                      <p>柔道歴：20年</p>
+                      <p>小中高大社で全国大会出場</p>
+                      <p>大学の時に全国大会上位入賞</p>
+                      <p>神奈川県成年の部 国体代表</p>
+                    </div>
+                  </div>
+
+                  {/* 職歴 */}
+                  <div>
+                    <h3 className="text-xl font-bold text-primary mb-4">職歴</h3>
+                    <p className="text-base text-muted md:text-lg">教員6年目</p>
+                  </div>
+
+                  {/* 出身地 */}
+                  <div>
+                    <h3 className="text-xl font-bold text-primary mb-4">出身地</h3>
+                    <p className="text-base text-muted md:text-lg">神奈川県出身</p>
+                  </div>
                 </div>
               </div>
 
-              {/* 職歴 */}
-              <div>
-                <h3 className="text-xl font-bold text-primary mb-4">職歴</h3>
-                <p className="text-base text-muted md:text-lg">教員6年目</p>
+              {/* メッセージコンテンツ */}
+              <div className="mx-auto max-w-4xl">
+                <div className="rounded-2xl border border-white/30 bg-white/95 backdrop-blur-md p-10 md:p-16 shadow-2xl">
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-base text-muted leading-relaxed md:text-lg md:leading-relaxed whitespace-pre-line">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
               </div>
-
-              {/* 出身地 */}
-              <div>
-                <h3 className="text-xl font-bold text-primary mb-4">出身地</h3>
-                <p className="text-base text-muted md:text-lg">神奈川県出身</p>
-              </div>
-            </div>
-          </div>
-
-          {/* メッセージコンテンツ */}
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-white/20 bg-white/90 backdrop-blur-sm p-10 md:p-16 shadow-japanese">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-base text-muted leading-relaxed md:text-lg md:leading-relaxed whitespace-pre-line">
-                  {member.bio}
-                </p>
-              </div>
-            </div>
-          </div>
             </div>
           </section>
         </div>
       </div>
-    </>
+    </div>
   );
 }
