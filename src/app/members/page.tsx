@@ -34,7 +34,7 @@ export default function MembersPage() {
       
       {/* コンテンツレイヤー */}
       <div className="relative z-10 min-h-screen">
-        {/* 名前 - 左上に手書き風の白文字 */}
+        {/* 名前 - 左上に白文字 */}
         <div className="absolute top-24 left-6 md:top-28 md:left-12 z-20">
           <h1 
             className="text-white text-4xl md:text-6xl lg:text-7xl font-black"
@@ -50,48 +50,87 @@ export default function MembersPage() {
           </h1>
         </div>
 
-        {/* メインコンテンツエリア - 名前と同じ左位置に配置 */}
-        <div className="pt-40 md:pt-48 pb-16">
-          <div className="absolute top-48 left-6 md:top-56 md:left-12 z-20 space-y-8">
-            {/* 詳細情報 */}
-            <div className="space-y-6">
-              {/* 学歴 */}
-              <div>
-                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>学歴</h3>
-                <p className="text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>天理大学体育学部体育学科 卒業</p>
-              </div>
-
-              {/* 柔道の大会成績 */}
-              <div>
-                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>柔道の大会成績</h3>
-                <div className="space-y-2 text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
-                  <p>年齢：28歳</p>
-                  <p>柔道歴：20年</p>
-                  <p>小中高大社で全国大会出場</p>
-                  <p>大学の時に全国大会上位入賞</p>
-                  <p>神奈川県成年の部 国体代表</p>
-                </div>
-              </div>
-
-              {/* 職歴 */}
-              <div>
-                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>職歴</h3>
-                <p className="text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>教員6年目</p>
-              </div>
-
-              {/* 出身地 */}
-              <div>
-                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>出身地</h3>
-                <p className="text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>神奈川県出身</p>
-              </div>
-            </div>
-
-            {/* メッセージコンテンツ */}
-            <div className="mt-12">
-              <p className="text-base text-white leading-relaxed md:text-lg md:leading-relaxed whitespace-pre-line max-w-2xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
-                {member.bio}
+        {/* メインコンテンツ - 名前と同じ左位置に白文字で配置（箱なし） */}
+        <div className="absolute top-48 left-6 md:top-56 md:left-12 z-20 space-y-8">
+          {/* 詳細情報 */}
+          <div className="space-y-6">
+            {/* 学歴 */}
+            <div>
+              <h3 
+                className="text-xl font-bold text-white mb-3" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                学歴
+              </h3>
+              <p 
+                className="text-base text-white md:text-lg" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                天理大学体育学部体育学科 卒業
               </p>
             </div>
+
+            {/* 柔道の大会成績 */}
+            <div>
+              <h3 
+                className="text-xl font-bold text-white mb-3" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                柔道の大会成績
+              </h3>
+              <div 
+                className="space-y-2 text-base text-white md:text-lg" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                <p>年齢：28歳</p>
+                <p>柔道歴：20年</p>
+                <p>小中高大社で全国大会出場</p>
+                <p>大学の時に全国大会上位入賞</p>
+                <p>神奈川県成年の部 国体代表</p>
+              </div>
+            </div>
+
+            {/* 職歴 */}
+            <div>
+              <h3 
+                className="text-xl font-bold text-white mb-3" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                職歴
+              </h3>
+              <p 
+                className="text-base text-white md:text-lg" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                教員6年目
+              </p>
+            </div>
+
+            {/* 出身地 */}
+            <div>
+              <h3 
+                className="text-xl font-bold text-white mb-3" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                出身地
+              </h3>
+              <p 
+                className="text-base text-white md:text-lg" 
+                style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+              >
+                神奈川県出身
+              </p>
+            </div>
+          </div>
+
+          {/* メッセージコンテンツ */}
+          <div className="mt-12">
+            <p 
+              className="text-base text-white leading-relaxed md:text-lg md:leading-relaxed whitespace-pre-line max-w-2xl" 
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+            >
+              {member.bio}
+            </p>
           </div>
         </div>
       </div>
