@@ -50,57 +50,49 @@ export default function MembersPage() {
           </h1>
         </div>
 
-        {/* メインコンテンツエリア */}
+        {/* メインコンテンツエリア - 名前と同じ左位置に配置 */}
         <div className="pt-40 md:pt-48 pb-16">
-          <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
-            <div className="space-y-12">
-              {/* 詳細情報 */}
-              <div className="mx-auto max-w-4xl">
-                <div className="rounded-2xl border border-white/30 bg-white/95 backdrop-blur-md p-8 md:p-12 shadow-2xl space-y-8">
-                  {/* 学歴 */}
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-4">学歴</h3>
-                    <p className="text-base text-muted md:text-lg">天理大学体育学部体育学科 卒業</p>
-                  </div>
+          <div className="absolute top-48 left-6 md:top-56 md:left-12 z-20 space-y-8">
+            {/* 詳細情報 */}
+            <div className="space-y-6">
+              {/* 学歴 */}
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>学歴</h3>
+                <p className="text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>天理大学体育学部体育学科 卒業</p>
+              </div>
 
-                  {/* 柔道の大会成績 */}
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-4">柔道の大会成績</h3>
-                    <div className="space-y-2 text-base text-muted md:text-lg">
-                      <p>年齢：28歳</p>
-                      <p>柔道歴：20年</p>
-                      <p>小中高大社で全国大会出場</p>
-                      <p>大学の時に全国大会上位入賞</p>
-                      <p>神奈川県成年の部 国体代表</p>
-                    </div>
-                  </div>
-
-                  {/* 職歴 */}
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-4">職歴</h3>
-                    <p className="text-base text-muted md:text-lg">教員6年目</p>
-                  </div>
-
-                  {/* 出身地 */}
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-4">出身地</h3>
-                    <p className="text-base text-muted md:text-lg">神奈川県出身</p>
-                  </div>
+              {/* 柔道の大会成績 */}
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>柔道の大会成績</h3>
+                <div className="space-y-2 text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  <p>年齢：28歳</p>
+                  <p>柔道歴：20年</p>
+                  <p>小中高大社で全国大会出場</p>
+                  <p>大学の時に全国大会上位入賞</p>
+                  <p>神奈川県成年の部 国体代表</p>
                 </div>
               </div>
 
-              {/* メッセージコンテンツ */}
-              <div className="mx-auto max-w-4xl">
-                <div className="rounded-2xl border border-white/30 bg-white/95 backdrop-blur-md p-10 md:p-16 shadow-2xl">
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-base text-muted leading-relaxed md:text-lg md:leading-relaxed whitespace-pre-line">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
+              {/* 職歴 */}
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>職歴</h3>
+                <p className="text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>教員6年目</p>
+              </div>
+
+              {/* 出身地 */}
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>出身地</h3>
+                <p className="text-base text-white md:text-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>神奈川県出身</p>
               </div>
             </div>
-          </section>
+
+            {/* メッセージコンテンツ */}
+            <div className="mt-12">
+              <p className="text-base text-white leading-relaxed md:text-lg md:leading-relaxed whitespace-pre-line max-w-2xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                {member.bio}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
