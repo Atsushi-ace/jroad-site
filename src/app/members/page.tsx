@@ -44,8 +44,6 @@ export default function MembersPage() {
               letterSpacing: '0.2em',
               lineHeight: '1.1',
               fontWeight: '900',
-              filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.7))',
-              WebkitTextStroke: '1px rgba(255, 255, 255, 0.3)',
             }}
           >
             {member.name}
