@@ -32,7 +32,7 @@ function TimelineItem({ item, index }: { item: { time: string; activity: string 
       </div>
       
       {/* Activity card */}
-      <div className="rounded-2xl border border-subtle bg-card p-4 text-sm leading-relaxed shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-0.5">
+      <div className="rounded-2xl bg-card p-4 text-sm leading-relaxed shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-0.5">
         {item.activity}
       </div>
     </motion.div>
@@ -226,7 +226,7 @@ export default function JudoExperiencePage() {
             '稽古後の振り返りと質疑応答の時間',
           ].map((item, index) => (
             <FadeInSection key={index} delay={index * 0.1}>
-              <div className="group flex gap-3 rounded-2xl border border-subtle bg-card p-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+              <div className="group flex gap-3 rounded-2xl bg-card p-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primarySoft text-sm font-semibold text-primary transition-transform duration-300 group-hover:scale-110">
                   {index + 1}
                 </div>
@@ -272,7 +272,7 @@ export default function JudoExperiencePage() {
           </div>
         </FadeInSection>
 
-        <div className="relative border-l-2 border-subtle pl-6 space-y-8">
+        <div className="relative border-l border-subtle pl-6 space-y-8">
           {scheduleItems.map((item, index) => (
             <TimelineItem key={index} item={item} index={index} />
           ))}
@@ -298,7 +298,7 @@ export default function JudoExperiencePage() {
                 '柔道の礼法や精神性に触れたい方',
               ].map((item, index) => (
                 <FadeInSection key={index} delay={index * 0.1}>
-                  <div className="flex gap-3 rounded-2xl border border-subtle bg-card p-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <div className="flex gap-3 rounded-2xl bg-card p-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primarySoft text-primary transition-transform duration-300 hover:scale-110">
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

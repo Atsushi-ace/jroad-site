@@ -18,7 +18,7 @@ export default function ContactPage() {
 
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[2fr,1fr]">
-          <div className="rounded-3xl border border-subtle bg-card p-8 shadow-japanese">
+          <div className="rounded-3xl bg-card p-8 shadow-xl">
             <form className="space-y-6" action={`mailto:${siteConfig.socials.email}`} method="post">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-primary">
@@ -68,7 +68,7 @@ export default function ContactPage() {
               </p>
             </form>
           </div>
-          <div className="flex flex-col gap-4 rounded-3xl border border-subtle bg-muted p-6 text-sm text-muted">
+          <div className="flex flex-col gap-4 rounded-3xl bg-muted p-6 text-sm text-muted shadow-lg">
             <div>
               <h2 className="text-base font-semibold text-primary">お問い合わせ先</h2>
               <p className="mt-2">
