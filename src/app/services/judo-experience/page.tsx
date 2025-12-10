@@ -90,7 +90,7 @@ export default function JudoExperiencePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section ref={heroRef} className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section ref={heroRef} className="mx-auto max-w-6xl px-4 pt-24 pb-12 sm:px-6 lg:px-8 lg:pt-32 lg:pb-16">
         <FadeInSection>
           <div className="rounded-3xl bg-muted p-6 shadow-xl lg:p-10">
             {/* Tag badges */}
@@ -192,8 +192,8 @@ export default function JudoExperiencePage() {
                   src="https://images.unsplash.com/photo-1542818454-dc05decf9db3?auto=format&fit=crop&w=1200&q=80"
                   alt="柔道体験"
                   className="h-auto w-full object-cover"
-                />
-              </div>
+        />
+      </div>
             </div>
           </div>
         </FadeInSection>
@@ -211,13 +211,13 @@ export default function JudoExperiencePage() {
         </FadeInSection>
 
         <div className="grid gap-4 md:grid-cols-2">
-          {[
-            '日本の伝統的な道場での柔道体験環境の提供',
-            '柔道初心者向けの基礎指導（受け身、礼法、基本の技）',
-            '道場でのマナー・ルールの丁寧な説明（日本語／英語）',
-            '柔道着のレンタル（別料金・対応可能な場合）',
-            '柔道の歴史や文化についての簡単な説明',
-            '稽古後の振り返りと質疑応答の時間',
+              {[
+                '日本の伝統的な道場での柔道体験環境の提供',
+                '柔道初心者向けの基礎指導（受け身、礼法、基本の技）',
+                '道場でのマナー・ルールの丁寧な説明（日本語／英語）',
+                '柔道着のレンタル（別料金・対応可能な場合）',
+                '柔道の歴史や文化についての簡単な説明',
+                '稽古後の振り返りと質疑応答の時間',
           ].map((item, index) => (
             <FadeInSection key={index} delay={index * 0.1}>
               <div className="group flex gap-3 rounded-2xl bg-card p-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
@@ -286,10 +286,10 @@ export default function JudoExperiencePage() {
 
             <div className="grid gap-4 md:grid-cols-2">
               {[
-                '柔道を初めて体験してみたい方',
-                '日本の伝統文化や武道に興味がある方',
-                '日本旅行中に柔道の基礎を学びたい方',
-                '柔道の礼法や精神性に触れたい方',
+          '柔道を初めて体験してみたい方',
+          '日本の伝統文化や武道に興味がある方',
+          '日本旅行中に柔道の基礎を学びたい方',
+          '柔道の礼法や精神性に触れたい方',
               ].map((item, index) => (
                 <FadeInSection key={index} delay={index * 0.1}>
                   <div className="flex gap-3 rounded-2xl bg-card p-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
