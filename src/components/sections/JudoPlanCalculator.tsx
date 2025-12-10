@@ -189,147 +189,124 @@ export function JudoPlanCalculator() {
         </p>
       </div>
 
-      {/* 横長レイアウト */}
-      <div className="flex flex-col lg:flex-row gap-6 items-start">
-        {/* 左側：入力エリア - 横並び */}
-        <div className="flex-1 w-full">
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {/* 日数 */}
-            <div className="group sm:col-span-1">
-              <label
-                htmlFor="days"
-                className="block text-sm font-semibold text-primary mb-2"
-              >
-                日数
-              </label>
+      {/* 横長レイアウト - すべて1行で表示 */}
+      <div className="flex flex-wrap items-end gap-4 lg:gap-6">
+        {/* 日数 */}
+        <div className="group flex items-center gap-3">
+          <label
+            htmlFor="days"
+            className="text-sm font-semibold text-primary whitespace-nowrap"
+          >
+            日数
+          </label>
+          <input
+            id="days"
+            type="number"
+            min={0}
+            max={31}
+            value={days}
+            onChange={handleDaysChange}
+            className="w-20 rounded-lg border border-subtle bg-white px-3 py-2 text-sm text-textMain transition-all duration-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 hover:border-primary/50"
+          />
+        </div>
+
+        {/* 道場数 */}
+        <div className="group flex items-center gap-3">
+          <label
+            htmlFor="dojoCount"
+            className="text-sm font-semibold text-primary whitespace-nowrap"
+          >
+            1日あたりの訪問道場数
+          </label>
+          <select
+            id="dojoCount"
+            value={dojoCount}
+            onChange={handleDojoCountChange}
+            className="w-24 rounded-lg border border-subtle bg-white px-3 py-2 text-sm text-textMain transition-all duration-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 hover:border-primary/50 cursor-pointer"
+          >
+            <option value="1">1拠点</option>
+            <option value="2">2拠点</option>
+            <option value="3">3拠点</option>
+          </select>
+        </div>
+
+        {/* 参加者区分 */}
+        <div className="group flex items-center gap-3">
+          <span className="text-sm font-semibold text-primary whitespace-nowrap">
+            参加者区分
+          </span>
+          <div className="flex items-center gap-4">
+            <label className="group flex items-center gap-2 cursor-pointer">
               <input
-                id="days"
-                type="number"
-                min={0}
-                max={31}
-                value={days}
-                onChange={handleDaysChange}
-                className="w-full rounded-lg border border-subtle bg-white px-4 py-3 text-sm text-textMain transition-all duration-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 hover:border-primary/50"
+                type="radio"
+                name="participantType"
+                value="u18"
+                checked={participantType === 'u18'}
+                onChange={handleParticipantTypeChange}
+                className="w-4 h-4 text-primary border-subtle focus:ring-2 focus:ring-primary/20 cursor-pointer transition-all duration-200"
               />
-              <small className="text-xs text-textMuted mt-1 block">
-                0〜31日の範囲で入力してください（空白も可能）
-              </small>
-            </div>
-
-            {/* 道場数 */}
-            <div className="group sm:col-span-1">
-              <label
-                htmlFor="dojoCount"
-                className="block text-sm font-semibold text-primary mb-2"
-              >
-                1日あたりの訪問道場数
-              </label>
-              <select
-                id="dojoCount"
-                value={dojoCount}
-                onChange={handleDojoCountChange}
-                className="w-full rounded-lg border border-subtle bg-white px-4 py-3 text-sm text-textMain transition-all duration-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 hover:border-primary/50 cursor-pointer"
-              >
-                <option value="1">1拠点</option>
-                <option value="2">2拠点</option>
-                <option value="3">3拠点</option>
-              </select>
-            </div>
-
-            {/* 参加者区分 */}
-            <div className="group sm:col-span-1">
-              <span className="block text-sm font-semibold text-primary mb-2">
-                参加者区分
+              <span className="text-sm text-textMain group-hover:text-primary transition-colors duration-200 whitespace-nowrap">
+                U18
               </span>
-              <div className="flex flex-col gap-2">
-                <label className="group flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="participantType"
-                    value="u18"
-                    checked={participantType === 'u18'}
-                    onChange={handleParticipantTypeChange}
-                    className="w-4 h-4 text-primary border-subtle focus:ring-2 focus:ring-primary/20 cursor-pointer transition-all duration-200"
-                  />
-                  <span className="text-sm text-textMain group-hover:text-primary transition-colors duration-200">
-                    U18（18歳未満）
-                  </span>
-                </label>
-                <label className="group flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="participantType"
-                    value="adult"
-                    checked={participantType === 'adult'}
-                    onChange={handleParticipantTypeChange}
-                    className="w-4 h-4 text-primary border-subtle focus:ring-2 focus:ring-primary/20 cursor-pointer transition-all duration-200"
-                  />
-                  <span className="text-sm text-textMain group-hover:text-primary transition-colors duration-200">
-                    大人
-                  </span>
-                </label>
-              </div>
-              <small className="text-xs text-textMuted mt-2 block">
-                現時点ではU18・大人とも同一料金ですが、将来的に割引率を変えることも可能です。
-              </small>
-            </div>
-
-            {/* 選択内容の要約 */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="sm:col-span-3 lg:col-span-1 rounded-xl bg-muted px-4 py-3 border border-subtle"
-            >
-              <div className="text-sm font-semibold text-primary mb-2">選択中のプラン</div>
-              <div className="space-y-1 text-sm text-textMain">
-                <div>・日数：{days === '' ? '（未入力）' : `${days}日`}</div>
-                <div>・1日あたりの訪問道場数：{dojoCount}拠点</div>
-                <div>
-                  ・参加者区分：
-                  {participantType === 'u18' ? 'U18（18歳未満）' : '大人'}
-                </div>
-              </div>
-            </motion.div>
+            </label>
+            <label className="group flex items-center gap-2 cursor-pointer">
+              <input
+                type="radio"
+                name="participantType"
+                value="adult"
+                checked={participantType === 'adult'}
+                onChange={handleParticipantTypeChange}
+                className="w-4 h-4 text-primary border-subtle focus:ring-2 focus:ring-primary/20 cursor-pointer transition-all duration-200"
+              />
+              <span className="text-sm text-textMain group-hover:text-primary transition-colors duration-200 whitespace-nowrap">
+                大人
+              </span>
+            </label>
           </div>
         </div>
 
-        {/* 右側：計算結果エリア */}
+        {/* 選択内容の要約 - 横一列 */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="flex items-center gap-4 rounded-lg bg-muted px-4 py-2 border border-subtle"
+        >
+          <div className="text-sm font-semibold text-primary whitespace-nowrap">選択中のプラン：</div>
+          <div className="flex items-center gap-3 text-sm text-textMain">
+            <span>日数：{days === '' ? '（未入力）' : `${days}日`}</span>
+            <span className="text-textMuted">|</span>
+            <span>{dojoCount}拠点</span>
+            <span className="text-textMuted">|</span>
+            <span>{participantType === 'u18' ? 'U18' : '大人'}</span>
+          </div>
+        </motion.div>
+
+        {/* 計算結果エリア - 横一列 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.4 }}
-          className="w-full lg:w-auto lg:min-w-[280px]"
+          className="ml-auto"
         >
-          <div className="rounded-2xl bg-gradient-to-br from-primarySoft to-primary/5 p-6 border border-primary/10 shadow-lg">
-            <div className="mb-4">
-              <div className="text-xs font-semibold text-primary mb-3 uppercase tracking-wide">
-                概算料金（1名あたり）
-              </div>
+          <div className="flex items-center gap-3 rounded-xl bg-gradient-to-br from-primarySoft to-primary/5 px-5 py-3 border border-primary/10 shadow-lg">
+            <div className="text-xs font-semibold text-primary uppercase tracking-wide whitespace-nowrap">
+              概算料金（1名あたり）
+            </div>
+            <div className="text-2xl lg:text-3xl font-bold text-primary">
               {daysNum === 0 || days === '' ? (
-                <div>
-                  <div className="text-3xl font-bold text-textMain mb-2">
-                    {formatYen(0)}
-                  </div>
-                  <div className="text-xs text-textMuted">
-                    日数を入力してください
-                  </div>
-                </div>
+                formatYen(0)
               ) : !isValid ? (
-                <div className="text-sm text-primary font-medium">
-                  この日数に対応する保険料データが見つかりません。
-                </div>
+                <span className="text-sm text-primary font-medium">データなし</span>
               ) : (
-                <motion.div
+                <motion.span
                   key={totalPrice}
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.3, type: 'spring', stiffness: 200 }}
                 >
-                  <div className="text-4xl font-bold text-primary">
-                    {formatYen(totalPrice)}
-                  </div>
-                </motion.div>
+                  {formatYen(totalPrice)}
+                </motion.span>
               )}
             </div>
           </div>
