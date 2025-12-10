@@ -256,7 +256,7 @@ export default function JudoExperiencePage() {
       </section>
 
       {/* Daily Schedule as Vertical Timeline */}
-      <section id="schedule" className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="schedule" className="mx-auto max-w-5xl px-4 py-12 pb-24 sm:px-6 lg:px-8 lg:py-16 lg:pb-32">
         <FadeInSection>
           <div className="mb-8">
             <h2 className="font-heading text-2xl font-bold text-primary tracking-tight sm:text-3xl">
