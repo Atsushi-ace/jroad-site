@@ -18,12 +18,6 @@ function TimelineItem({ item, index }: { item: { time: string; activity: string 
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="group relative"
     >
-      {/* Timeline marker */}
-      <motion.div
-        className="absolute -left-[13px] mt-1 h-3 w-3 rounded-full border-2 border-primary bg-white transition-all duration-300 group-hover:scale-110 group-hover:bg-primary"
-        whileHover={{ scale: 1.2 }}
-      />
-      
       {/* Time label */}
       <div className="mb-2">
         <span className="inline-flex items-center justify-center rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-semibold text-primary transition-colors duration-300 group-hover:bg-primary/20">
@@ -272,7 +266,7 @@ export default function JudoExperiencePage() {
           </div>
         </FadeInSection>
 
-        <div className="relative border-l border-subtle pl-6 space-y-8">
+        <div className="relative space-y-8">
           {scheduleItems.map((item, index) => (
             <TimelineItem key={index} item={item} index={index} />
           ))}
